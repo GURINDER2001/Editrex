@@ -1,5 +1,6 @@
 # Editrex
 ![Logo](logo.png)
+
 Editrex is a rich text editor component npm package for react.
 
 For installation and usage guide proceed below.
@@ -12,7 +13,6 @@ Live demo : [Click here](http://editrex.kalgury.in)
 - Easy Integration
 
 ## Getting Started
-![Logo](editor.png)
 
 ```
 npm install --save editrex react react-dom
@@ -27,6 +27,8 @@ Editrex depends on React and React DOM which must also be installed.
 
 
 ### Using Editrex
+
+![Logo](editor.png)
 
 ```js
 import React from "react";
