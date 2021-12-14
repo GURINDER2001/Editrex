@@ -1,3 +1,3 @@
-import EditorX from "./Component/editrex"
+import Editrex from "./component/editrex"
 
-export {EditorX};-npm
+export {Editrex}

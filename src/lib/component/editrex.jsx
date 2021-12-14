@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import "./style.css";
-const EditorX = (props) => {
+const Editrex = (props) => {
   useEffect(() => {
     enableEditMode();
     lookChanges();
     changeTheme(props.theme);
-  }, []);
+  }, [props.theme]);
 
   function changeTheme(theme) {
     let root = document.querySelector(":root");
@@ -26,6 +26,11 @@ const EditorX = (props) => {
       root.style.setProperty("--background", "rgb(33, 33, 33)");
       root.style.setProperty("--border", "rgb(170, 170, 170)");
       root.style.setProperty("--icon", "rgb(247, 247, 247)");
+    }
+    else{
+      root.style.setProperty("--background", "rrgb(255, 255, 255)");
+      root.style.setProperty("--border", "lightgrey");
+      root.style.setProperty("--icon", "rgbrgb(68, 68, 68)");
     }
   }
 
@@ -528,4 +533,4 @@ const EditorX = (props) => {
   );
 };
 
-export default EditorX;
+export default Editrex;
