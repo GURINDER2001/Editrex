@@ -1,0 +1,80 @@
+:root{
+   --icon:rgb(68, 68, 68);
+--border:lightgrey;
+--background:rgb(255, 255, 255);
+
+}
+
+
+.editrex{
+    background-color: var(--background);
+    border:1px solid var(--border);
+    padding:15px;
+    border-radius:15px;
+}
+.editrex.dark select{
+color: var(--background) !important;
+}
+.editorFunctions{
+    justify-content: space-evenly;
+}
+.editorUtility>button{
+    margin: 3px 5px;
+}
+div>button>svg{
+    align-self: center;
+}
+.editrex svg path{
+fill:var(--icon);
+}
+select{
+    border-color: var(--border);
+    border-radius: 5px;
+    padding: 2px 4px;
+    color:var(--icon)
+}
+select:focus-visible,select:focus-within{
+    border-color: var(--border);
+}
+
+
+iframe{
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    margin-top: 10px;
+    height:max-content;
+    background-color: white;
+}
+
+input[type="color"] {
+	-webkit-appearance: none;
+	border: 1px solid transparent;
+	width: 32px;
+	height: 32px;
+    border-radius: 50%;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0px;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+    border-radius: 50%;
+}
+.branding{
+    color:var(--icon);
+    font-size: x-small;
+    font-weight: bold;
+    text-align: end;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .editorFunctions{
+        justify-content: center;
+    }
+  div>button ,div>select,div>input{
+    margin: 3px 5px;
+}
+  }
+
