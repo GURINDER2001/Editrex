@@ -3,7 +3,7 @@
   "description": "A rich text editor for React",
   "author": "Gurinder Singh Kalsi",
   "keywords": ["react", "components", "rich text editor" , "react text editor","text editor","theme","theme text editor"],
-  "version": "1.0.1",
+  "version": "1.0.3",
   "private": false,
   "main": "dist/index.js",
 "module": "dist/index.js",

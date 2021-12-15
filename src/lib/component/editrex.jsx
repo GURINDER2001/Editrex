@@ -36,11 +36,19 @@ const Editrex = (props) => {
 
   function lookChanges() {
     let iframe = document.getElementsByName("richTextField")[0];
+  
 
     iframe.contentDocument.body.addEventListener("keydown", Handler);
     iframe.contentDocument.body.addEventListener("click", Handler);
 
     function Handler() {
+      if( iframe.contentWindow.document.body.scrollHeight>150  ){
+
+        // iframe.style.height = "10px";
+        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
+      }else{
+        iframe.style.height="150px"
+      }
       props.updateEditorState(
         document.getElementsByName("richTextField")[0].contentWindow.document
           .body.innerHTML
@@ -452,6 +460,7 @@ const Editrex = (props) => {
           display: "flex",
           flexWrap: "wrap",
           justifyContent: "center",
+          marginTop:'5px'
         }}
       >
         <button type="button" onClick={() => Edit("cut")} title="cut">
@@ -524,7 +533,7 @@ const Editrex = (props) => {
       </div>
       <iframe
         name="richTextField"
-        onKeyPress={() => alert()}
+ 
         id="rich"
       ></iframe>
 

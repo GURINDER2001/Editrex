@@ -48,7 +48,7 @@ iframe{
     border: 1px solid var(--border);
     border-radius: 5px;
     margin-top: 10px;
-    height:max-content;
+    overflow: none;
     background-color: white;
 }
 

@@ -54,6 +54,13 @@ const Editrex = props => {
     iframe.contentDocument.body.addEventListener("click", Handler);
 
     function Handler() {
+      if (iframe.contentWindow.document.body.scrollHeight > 150) {
+        // iframe.style.height = "10px";
+        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
+      } else {
+        iframe.style.height = "150px";
+      }
+
       props.updateEditorState(document.getElementsByName("richTextField")[0].contentWindow.document.body.innerHTML);
     }
   }
@@ -414,7 +421,8 @@ const Editrex = props => {
       textAlign: "center",
       display: "flex",
       flexWrap: "wrap",
-      justifyContent: "center"
+      justifyContent: "center",
+      marginTop: '5px'
     }
   }, /*#__PURE__*/_react.default.createElement("button", {
     type: "button",
@@ -484,7 +492,6 @@ const Editrex = props => {
     d: "M 6.011719 0.1875 C 7.5625 0.191406 8.972656 0.800781 10.015625 1.796875 L 10.851562 0.960938 C 11.207031 0.605469 11.8125 0.855469 11.8125 1.359375 L 11.8125 4.5 C 11.8125 4.8125 11.5625 5.0625 11.25 5.0625 L 8.109375 5.0625 C 7.605469 5.0625 7.355469 4.457031 7.710938 4.101562 L 8.6875 3.125 C 7.964844 2.445312 7.03125 2.070312 6.035156 2.0625 C 3.871094 2.042969 2.042969 3.796875 2.0625 6.035156 C 2.082031 8.15625 3.800781 9.9375 6 9.9375 C 6.964844 9.9375 7.875 9.59375 8.59375 8.964844 C 8.703125 8.867188 8.871094 8.871094 8.976562 8.976562 L 9.90625 9.90625 C 10.019531 10.019531 10.015625 10.207031 9.894531 10.316406 C 8.863281 11.246094 7.5 11.8125 6 11.8125 C 2.789062 11.8125 0.1875 9.210938 0.1875 6 C 0.1875 2.792969 2.804688 0.183594 6.011719 0.1875 Z M 6.011719 0.1875 "
   }))))), /*#__PURE__*/_react.default.createElement("iframe", {
     name: "richTextField",
-    onKeyPress: () => alert(),
     id: "rich"
   }), /*#__PURE__*/_react.default.createElement("div", {
     className: "branding"
